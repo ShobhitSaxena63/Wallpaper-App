@@ -6,4 +6,10 @@
     <string name="network_error_msg">Error fetching data. Please check network</string>
     <string name="unknown_error_msg">Unknown Error. %1$s</string>
     <string name="wallpapers">Wallpapers</string>
+    <string name="loading_error_msg">Something wrong try again after some time</string>
+    <string name="set_wallpaper">SET WALLPAPER</string>
+    <string name="set_lock_screen">SET LOCK SCREEN</string>
+    <string name="save_to_gallery">SAVE TO GALLERY</string>
+    <string name="what_would_you_like_to_do">What would you like to do?</string>
+    <string name="set_both">SET BOTH</string>
 </resources>

@@ -11,6 +11,7 @@ import com.shobhit63.wallpaperworld.MyTypeConverter
 @Database(entities = [Wallpapers::class], version = 1)
 abstract class WallpaperDatabase:RoomDatabase() {
     abstract fun homeDao():HomeDao
+    abstract fun detailDao():DetailDao
 
     companion object{
         @Volatile

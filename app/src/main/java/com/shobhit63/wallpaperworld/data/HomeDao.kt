@@ -13,4 +13,7 @@ interface HomeDao {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertWallpapers(wallpapers: List<Wallpapers>)
+
+    @Query("DELETE FROM wallpapers")
+    suspend fun deleteAllWallpapers()
 }

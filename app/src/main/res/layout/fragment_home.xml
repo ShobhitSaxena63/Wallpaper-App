@@ -10,15 +10,17 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:contentDescription="@string/wallpapers"
+        android:layout_marginTop="8dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/search_edit_text"
         app:spanCount="3"
-        android:contentDescription="@string/wallpapers"
-        tools:listitem="@layout/rv_look"/>
+        tools:listitem="@layout/rv_look" />
+
     <ProgressBar
         android:id="@+id/loading_status"
         android:layout_width="wrap_content"
@@ -41,4 +43,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:text="Loading Data" />
+
+    <EditText
+        android:id="@+id/search_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="3"
+        android:background="@drawable/search_edittext_background"
+        android:hint="Search"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:maxLength="20"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toStartOf="@+id/search_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/search_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#B65353"
+        android:text="Search"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

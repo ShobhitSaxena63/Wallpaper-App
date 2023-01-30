@@ -14,6 +14,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.Headers
+import retrofit2.http.Query
 
 
 interface PexelsService {
@@ -37,14 +38,12 @@ interface PexelsService {
             val gson = GsonBuilder()
                 .create()
 
-
             Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .client(httpClient)
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build()
                 .create(PexelsService::class.java)
-
         }
 
         fun getInstance(): PexelsService {
@@ -53,8 +52,11 @@ interface PexelsService {
     }
 
     @Headers("Authorization: "+BuildConfig.PEXELS_API_KEY)
-//    @GET("curated?per_page=30&page=1")
-//    search?query=nature&per_page=1
-    @GET("search?query=games&per_page=45")
+//    @GET("search?query=taj mahal&per_page=45")
+    @GET("curated?per_page=45")
     suspend fun getWallpapers(): Response<PexelsWallpaperList>
+
+    @Headers("Authorization: "+BuildConfig.PEXELS_API_KEY)
+    @GET("search")
+    suspend fun getSearchWallpapers(@Query("query") p1:String, @Query("per_page") p2:String):Response<PexelsWallpaperList>
 }

@@ -23,16 +23,24 @@ class HomeRepository(context:Application) {
 //            wallpapersList?.let { homeDao.insertWallpapers(it.results) }
 //        }
 //    }
-    suspend fun fetchFromNetwork() =
+    suspend fun fetchFromNetwork(fetchType: FetchType,search:String = "popular",perPage:String = "20") =
         try{
-            val result = pexelsService.getWallpapers()
+            val result = when(fetchType){
+                FetchType.Curated -> pexelsService.getWallpapers()
+                FetchType.UserSearch -> pexelsService.getSearchWallpapers(search,perPage)
+                else -> { pexelsService.getWallpapers()}
+            }
             if(result.isSuccessful) {
+                deleteAllWallpapers()
+                Timber.d("HomeRepository wallpaper list result : $result")
                 val wallpaperList = result.body()
                 //Logcat needed
                 Timber.d("HomeRepository wallpaper list: $wallpaperList")
                 wallpaperList?.let {homeDao.insertWallpapers(it.photos) }
                 LoadingStatus.success()
-            } else{
+            }
+            else{
+                Timber.d("HomeRepository wallpaper list result : $result")
                 LoadingStatus.error(ErrorCode.NO_DATA)
             }
         }catch (ex: UnknownHostException){
@@ -40,4 +48,7 @@ class HomeRepository(context:Application) {
         }catch (ex:Exception){
             LoadingStatus.error(ErrorCode.UNKNOWN_ERROR,ex.message)
         }
+    suspend fun deleteAllWallpapers(){
+        homeDao.deleteAllWallpapers()
+    }
 }
