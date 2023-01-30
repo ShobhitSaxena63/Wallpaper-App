@@ -16,11 +16,11 @@ enum class SetOptions{
 @Entity(tableName = "wallpapers")
 data class Wallpapers(
     @PrimaryKey val id:Long,
-    val photographer:String? = null,
+    val photographer:String,
     val avg_color:String? = null,
     val url:String,
     val src:CustomSources,
     @ColumnInfo(name = "wallpaper_path")
-    @SerializedName("portrait")
-    val wallpaperPath:String?=null
+//    @SerializedName("portrait")
+    val alt:String
 )

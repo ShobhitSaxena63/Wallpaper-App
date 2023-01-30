@@ -2,4 +2,8 @@
 <resources>
     <color name="search_et">#232323</color>
     <color name="search_et_stroke">#232323</color>
+    <color name="bd_bg_solid">#232323</color>
+    <color name="bd_bg_stroke">#232323</color>
+    <color name="text_white">#FF000000</color>
+    <color name="text_black">#EAE9E9</color>
 </resources>

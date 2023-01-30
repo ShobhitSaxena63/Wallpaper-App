@@ -1,19 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<selector xmlns:android="http://schemas.android.com/apk/res/android">-->
-<!--<item>-->
-<!--&lt;!&ndash;    <shape android:shape="oval">&ndash;&gt;-->
-<!--&lt;!&ndash;        <size android:width="10dp" android:height="10dp"/>&ndash;&gt;-->
-<!--&lt;!&ndash;        <solid android:color="@color/search_et"/>&ndash;&gt;-->
-<!--&lt;!&ndash;        <stroke android:width="1dp" android:color="@color/black"/>&ndash;&gt;-->
-<!--&lt;!&ndash;    </shape>&ndash;&gt;-->
-
-<!--            <shape android:shape="oval">-->
-<!--                <solid android:color="@color/white" />-->
-<!--                <size android:width="30dp" android:height="30dp" />-->
-<!--            </shape>-->
-
-<!--</item>-->
-<!--</selector>-->
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
     <item>
         <shape android:shape="oval">

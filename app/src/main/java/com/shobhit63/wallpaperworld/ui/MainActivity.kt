@@ -1,7 +1,7 @@
 package com.shobhit63.wallpaperworld.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.shobhit63.wallpaperworld.R
 
 class MainActivity : AppCompatActivity() {
@@ -9,4 +9,5 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
+
 }

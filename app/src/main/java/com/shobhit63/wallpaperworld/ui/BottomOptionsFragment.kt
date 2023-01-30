@@ -16,6 +16,10 @@ class BottomOptionsFragment : BottomSheetDialogFragment(),View.OnClickListener{
     private lateinit var _binding:FragmentBottomOptionsBinding
     private val binding get() = _binding
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setStyle(STYLE_NORMAL, R.style.BottomSheetDialogStyle)
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

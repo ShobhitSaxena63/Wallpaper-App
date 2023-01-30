@@ -12,4 +12,6 @@
     <string name="save_to_gallery">SAVE TO GALLERY</string>
     <string name="what_would_you_like_to_do">What would you like to do?</string>
     <string name="set_both">SET BOTH</string>
+    <string name="search">Search</string>
+    <string name="photographer_name">Photographer: %1$s</string>
 </resources>

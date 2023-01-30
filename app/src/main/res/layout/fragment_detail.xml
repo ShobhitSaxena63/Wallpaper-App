@@ -18,36 +18,56 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_view"
         android:layout_width="match_parent"
-        android:layout_height="580dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginEnd="34dp"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="10dp"
+        android:layout_height="@dimen/_580dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:layout_marginStart="@dimen/_34dp"
+        android:layout_marginEnd="@dimen/_34dp"
+        app:cardCornerRadius="@dimen/_10dp"
+        app:cardElevation="@dimen/_10dp"
         app:layout_constraintStart_toStartOf="@id/view"
         app:layout_constraintEnd_toEndOf="@id/view"
-        app:layout_constraintTop_toTopOf="@id/view">
+        app:layout_constraintTop_toBottomOf="@id/photographer_name">
         <ImageView
             android:id="@+id/wallpaper_image_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitXY"
+            android:contentDescription="@string/wallpapers"
             tools:srcCompat="@tools:sample/avatars"/>
     </com.google.android.material.card.MaterialCardView>
 
     <Button
         android:id="@+id/download_btn"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="@dimen/_60dp"
+        android:layout_height="@dimen/_60dp"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_marginTop="@dimen/_8dp"
+        android:layout_marginEnd="@dimen/_8dp"
+        android:layout_marginBottom="@dimen/_8dp"
         android:background="@drawable/download_btn_background"
         android:contentDescription="@string/app_name"
         app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/card_view"
         app:layout_constraintStart_toStartOf="@+id/card_view"
-        app:layout_constraintTop_toBottomOf="@id/card_view" />
+        app:layout_constraintTop_toBottomOf="@id/card_view"
+        app:layout_constraintVertical_bias="0.26" />
+
+    <TextView
+        android:id="@+id/photographer_name"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textAlignment="viewEnd"
+        android:layout_margin="@dimen/_16dp"
+        android:fontFamily="cursive"
+        android:text="@string/photographer_name"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        tools:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/view"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/view"
+        app:layout_constraintTop_toTopOf="@id/view" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

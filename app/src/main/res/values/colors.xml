@@ -7,38 +7,14 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    //My Resources
-    <color name="outline">#FF000000</color>
-    <color name="net_balance_color">#29AA2F</color>
-    <color name="cash_color">#8EA5C9</color>
-    <color name="debit_color">#BE18DA</color>
-    <color name="exceed_budget_color">#D0D64051</color>
-    <color name="arrow_color">#35DEB2</color>
-    <color name="indicator_red">#D0D64051</color>
-    <color name="indicator_green">#4FC353</color>
-    <color name="month_card_red_color">#A61919</color>
-    <color name="credit_color">#EB30C8BA</color>
+<!--    My Resources-->
 
     <color name="search_et">#FFFFFFFF</color>
     <color name="search_et_stroke">#232323</color>
-    <!--    <color name="card_view">#272727</color>-->
-<!--    <color name="screen_background">#393939</color>-->
-<!--    <color name="pie_chart_hole">#232323</color>-->
-<!--    <color name="text_color">#EAE9E9</color>-->
-<!--    &lt;!&ndash;        <color name="header_text">#232323</color>&ndash;&gt;-->
-<!--    <color name="text_background">#FF000000</color>-->
-<!--    <color name="text_white">#FF000000</color>-->
-<!--    <color name="save_button">#5192C6</color>-->
-<!--    <color name="fab_button">#5192C6</color>-->
-<!--    <color name="status_bar">#393939</color>-->
-<!--    <color name="month_net_balance_background_color">#232323</color>-->
-<!--    <color name="amount_spend">#D0952E39</color>-->
-<!--    <color name="amount_saved">#377A3A</color>-->
-<!--    <color name="card_items">#808080</color>-->
-<!--    <color name="menu">#808080</color>-->
-<!--    <color name="material_design_edit_text_outline">#EAE9E9</color>-->
+    <color name="search_btn">#B65353</color>
+    <color name="bd_bg_solid">#EAE9E9</color>
+    <color name="bd_bg_stroke">#FF000000</color>
+    <color name="text_white">#FFFFFFFF</color>
+    <color name="text_black">#FF000000</color>
 
-    <!--    Calendar View-->
-    <color name="calendar_toolbar">#282828</color>
-    <color name="splash_background">#E9000000</color>
 </resources>

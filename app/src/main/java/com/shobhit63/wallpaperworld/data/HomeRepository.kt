@@ -25,13 +25,12 @@ class HomeRepository(context:Application) {
 //    }
     suspend fun fetchFromNetwork(fetchType: FetchType,search:String = "popular",perPage:String = "20") =
         try{
+            deleteAllWallpapers()
             val result = when(fetchType){
                 FetchType.Curated -> pexelsService.getWallpapers()
                 FetchType.UserSearch -> pexelsService.getSearchWallpapers(search,perPage)
-                else -> { pexelsService.getWallpapers()}
             }
             if(result.isSuccessful) {
-                deleteAllWallpapers()
                 Timber.d("HomeRepository wallpaper list result : $result")
                 val wallpaperList = result.body()
                 //Logcat needed

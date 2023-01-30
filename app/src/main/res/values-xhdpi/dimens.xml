@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<!--    dp-->
+    <!--    dp-->
     <dimen name="_6dp">6dp</dimen>
     <dimen name="_8dp">8dp</dimen>
     <dimen name="_10dp">10dp</dimen>
@@ -12,16 +12,16 @@
     <dimen name="_32dp">32dp</dimen>
     <dimen name="_34dp">34dp</dimen>
     <dimen name="_50dp">50dp</dimen>
-<!--    round button in detail fragment -->
+    <!--    round button in detail fragment -->
     <dimen name="_60dp">60dp</dimen>
     <dimen name="_64dp">64dp</dimen>
     <!--   image size in recycler view item -->
     <dimen name="_200dp">200dp</dimen>
     <!--   image size in detail fragment -->
-    <dimen name="_580dp">580dp</dimen>
+    <dimen name="_580dp">420dp</dimen>
 
 
-<!--    sp-->
+    <!--    sp-->
     <dimen name="_18sp">18sp</dimen>
     <dimen name="_16sp">16sp</dimen>
 </resources>

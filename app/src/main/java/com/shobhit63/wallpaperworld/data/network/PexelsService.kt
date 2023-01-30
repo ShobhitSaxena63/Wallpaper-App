@@ -52,8 +52,8 @@ interface PexelsService {
     }
 
     @Headers("Authorization: "+BuildConfig.PEXELS_API_KEY)
-//    @GET("search?query=taj mahal&per_page=45")
-    @GET("curated?per_page=45")
+    @GET("search?query=popular&per_page=78")
+//    @GET("curated?per_page=78")
     suspend fun getWallpapers(): Response<PexelsWallpaperList>
 
     @Headers("Authorization: "+BuildConfig.PEXELS_API_KEY)

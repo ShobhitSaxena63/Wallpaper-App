@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId "com.shobhit63.wallpaperworld"
-        minSdk 22
+        minSdk 24
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -64,4 +64,6 @@ dependencies {
 
     //Timber for logging
     implementation 'com.jakewharton.timber:timber:5.0.1'
+    //Swipe Refresh layout
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
 }
