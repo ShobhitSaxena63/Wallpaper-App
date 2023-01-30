@@ -99,10 +99,10 @@ class Detail : Fragment(){
             val request = DownloadManager.Request(Uri.parse(photoPath))
             request.apply {
                 setAllowedNetworkTypes(DownloadManager.Request.NETWORK_MOBILE or DownloadManager.Request.NETWORK_WIFI)
-                setTitle(fileName)
-                setDescription("Download Manager")
+                setTitle("image")
+                setDescription("Image is downloading")
                 setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-                setDestinationInExternalPublicDir(Environment.DIRECTORY_PICTURES, File.separator+fileName+".jpg")
+                setDestinationInExternalPublicDir(Environment.DIRECTORY_PICTURES, "image.jpg")
                 downloadManager.enqueue(this)
             }
             Snackbar.make(binding.root, "Wallpaper Save to Gallery", Snackbar.LENGTH_SHORT).show()
@@ -136,7 +136,7 @@ class Detail : Fragment(){
 
     private fun setData(wallpaper: Wallpapers) {
         binding.view.setBackgroundColor(Color.parseColor(wallpaper.avg_color))
-        binding.photographerName.text = getString(R.string.photographer_name,wallpaper.photographer)
+        binding.photographerName.text =    getString(R.string.photographer_name,wallpaper.photographer)
         Glide.with(requireActivity())
             .load(wallpaper.src.portrait)
             .error(R.drawable.error_image)
