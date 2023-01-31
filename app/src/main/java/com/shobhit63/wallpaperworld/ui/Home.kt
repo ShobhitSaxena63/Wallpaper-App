@@ -11,6 +11,7 @@ import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import com.facebook.shimmer.ShimmerFrameLayout
 import com.shobhit63.wallpaperworld.R
 import com.shobhit63.wallpaperworld.data.FetchType
 import com.shobhit63.wallpaperworld.data.SetOptions
@@ -19,6 +20,7 @@ import com.shobhit63.wallpaperworld.data.network.Status
 import com.shobhit63.wallpaperworld.databinding.FragmentHomeBinding
 import timber.log.Timber
 
+
 class Home : Fragment() {
     private lateinit var _binding:FragmentHomeBinding
     private val binding get() = _binding
@@ -26,6 +28,16 @@ class Home : Fragment() {
 
 
 
+
+    override fun onResume() {
+        super.onResume()
+        binding.shimmerViewContainer.startShimmerAnimation()
+    }
+
+    override fun onPause() {
+        binding.shimmerViewContainer.stopShimmerAnimation()
+        super.onPause()
+    }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,7 +64,11 @@ class Home : Fragment() {
                 }
             }
         })
-        viewModel.refreshData()
+        if (viewModel.onStartOfApp.value==true) {
+            viewModel.refreshData()
+            viewModel.setOnStartOfApp(false)
+        }
+
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -84,15 +100,21 @@ class Home : Fragment() {
         viewModel.loadingStatus.observe(viewLifecycleOwner){ loadingStatus->
             when (loadingStatus?.status) {
                 Status.LOADING -> {
-                    binding.loadingStatus.visibility = View.VISIBLE
+//                    binding.loadingStatus.visibility = View.VISIBLE
+                    binding.shimmerViewContainer.startShimmerAnimation()
+                    binding.shimmerViewContainer.visibility = View.VISIBLE
                     binding.statusError.visibility = View.INVISIBLE
                 }
                 Status.SUCCESS -> {
-                    binding.loadingStatus.visibility = View.INVISIBLE
+//                    binding.loadingStatus.visibility = View.INVISIBLE
                     binding.statusError.visibility = View.INVISIBLE
+                    binding.shimmerViewContainer.stopShimmerAnimation()
+                    binding.shimmerViewContainer.visibility = View.GONE
                 }
                 Status.ERROR -> {
-                    binding.loadingStatus.visibility = View.INVISIBLE
+//                    binding.loadingStatus.visibility = View.INVISIBLE
+                    binding.shimmerViewContainer.stopShimmerAnimation()
+                    binding.shimmerViewContainer.visibility = View.GONE
                     showErrorMessage(loadingStatus.errorCode,loadingStatus.message)
                     binding.statusError.visibility = View.VISIBLE
                 }
@@ -127,7 +149,7 @@ class Home : Fragment() {
         //clear focus and close the keyboard when user search
         binding.searchEditText.clearFocus()
         val inputMethod: InputMethodManager = requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-            inputMethod.hideSoftInputFromWindow(binding.searchEditText.windowToken, 0)
+        inputMethod.hideSoftInputFromWindow(binding.searchEditText.windowToken, 0)
 
         //check user input is not blank then search
         try {
