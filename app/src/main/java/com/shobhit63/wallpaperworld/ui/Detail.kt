@@ -6,12 +6,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
-import com.bumptech.glide.Glide
 import com.shobhit63.wallpaperworld.R
 import com.shobhit63.wallpaperworld.data.Wallpapers
 import com.shobhit63.wallpaperworld.databinding.FragmentDetailBinding
@@ -39,14 +37,13 @@ class Detail : Fragment(){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         //viewpager
-        binding.viewPager.adapter = ViewPagerAdapter{
-            Toast.makeText(requireActivity(),"View Pager Tapped",Toast.LENGTH_SHORT).show()
-        }
+        binding.viewPager.adapter = ViewPagerAdapter()
         viewModel.allWallpapers.observe(viewLifecycleOwner) {
             it?.let {
                 (binding.viewPager.adapter as ViewPagerAdapter).submitList(it)
-                Timber.d("View Pager Testing Current Position: ${binding.viewPager.currentItem}")
+                Timber.d("View Pager Current Position: ${binding.viewPager.currentItem}")
                 val currentIndex:Int = DetailArgs.fromBundle(requireArguments()).currentItem
                  binding.viewPager.currentItem = currentIndex
             }
@@ -54,12 +51,9 @@ class Detail : Fragment(){
         }
         binding.viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
-//                Timber.d("View Pager Testing Current Position onPageSelected: $position")
-                //
                 viewModel.allWallpapers.observe(viewLifecycleOwner) {
                     it?.let {
-                        Timber.d("View Pager Testing Complete list: ${it[position]}")
-                        Timber.d("View Pager Testing Current Position onPageSelected: $position")
+                        //set background color and photographer name
                         setData(it[position])
                     }
                 }
@@ -73,6 +67,7 @@ class Detail : Fragment(){
             // Pass current view id to bottom dialog fragment
             viewModel.allWallpapers.observe(viewLifecycleOwner) {
                 it?.let {
+                    //pass id of current element so that we can perform - set and download operations
                     findNavController().navigate(DetailDirections.actionDetailToBottomOptionsFragment(it[binding.viewPager.currentItem].id))
                 }
             }
@@ -84,10 +79,6 @@ class Detail : Fragment(){
     private fun setData(wallpaper: Wallpapers) {
         binding.view.setBackgroundColor(Color.parseColor(wallpaper.avg_color))
         binding.photographerName.text = getString(R.string.photographer_name,wallpaper.photographer)
-        Glide.with(requireActivity())
-            .load(wallpaper.src.portrait)
-            .error(R.drawable.error_image)
-            .into(binding.wallpaperImageView)
     }
 
 

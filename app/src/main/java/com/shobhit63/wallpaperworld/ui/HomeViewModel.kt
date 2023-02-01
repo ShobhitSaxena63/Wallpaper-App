@@ -45,7 +45,7 @@ class HomeViewModel(application: Application):AndroidViewModel(application) {
         _loadingStatus.value = LoadingStatus.loading()
         viewModelScope.launch {
             _loadingStatus.value = withContext(Dispatchers.IO){
-//                delay(5000)
+                //search acc. to type of search
                 when(fetchType){
                     FetchType.Curated -> repo.fetchFromNetwork(FetchType.Curated)
                     FetchType.UserSearch -> repo.fetchFromNetwork(FetchType.UserSearch,search,perPage)
@@ -54,6 +54,7 @@ class HomeViewModel(application: Application):AndroidViewModel(application) {
         }
     }
     fun refreshData(){
+        // to refresh first delete all data then fetch
         viewModelScope.launch(Dispatchers.IO){
             repo.deleteAllWallpapers()
         }

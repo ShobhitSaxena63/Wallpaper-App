@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -26,35 +28,20 @@ class Home : Fragment() {
     private val binding get() = _binding
     private lateinit var viewModel: HomeViewModel
 
-
-
-
-    override fun onResume() {
-        super.onResume()
-        binding.shimmerViewContainer.startShimmerAnimation()
-    }
-
-    override fun onPause() {
-        binding.shimmerViewContainer.stopShimmerAnimation()
-        super.onPause()
-    }
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        Timber.d("Fragment calling onCreate()")
         viewModel = ViewModelProvider(this)[HomeViewModel::class.java]
-        Timber.d("Back Press testing | onCreate() fun = ${viewModel.backAction.value}")
-//
+
+        Timber.d("Back Press tracking | onCreate() fun = ${viewModel.backAction.value}")
+        //reach to curated wallpapers when user press back button
         requireActivity().onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-//                Timber.d("Back Press testing | onCreate = ${viewModel.backAction.value}")
+//                Timber.d("Back Press tracking | onCreate = ${viewModel.backAction.value}")
                 if(viewModel.backAction.value == true){
-//                    Timber.d("Back Press testing | onCreate if = ${viewModel.backAction.value}")
                     // in here you can do logic when backPress is clicked
                     viewModel.fetchFromNetwork(FetchType.Curated)
                     viewModel.setBackAction(false)
-                    Timber.d("Back Press testing | handleOnBackPressed() fun = ${viewModel.backAction.value}")
+                    Timber.d("Back Press tracking | handleOnBackPressed() fun = ${viewModel.backAction.value}")
                     binding.searchEditText.setText("")
                     binding.searchEditText.clearFocus()
 
@@ -64,6 +51,7 @@ class Home : Fragment() {
                 }
             }
         })
+        //On start of app show curated wallpapers
         if (viewModel.onStartOfApp.value==true) {
             viewModel.refreshData()
             viewModel.setOnStartOfApp(false)
@@ -81,7 +69,16 @@ class Home : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Timber.d("Back Press testing | onViewCreated() fun = ${viewModel.backAction.value}")
+        // Get a reference to the AutoCompleteTextView in the layout
+//        val textView = findViewById(R.id.autocomplete_country) as AutoCompleteTextView
+// Get the string array
+        val countries: Array<out String> = resources.getStringArray(R.array.countries_array)
+// Create the adapter and set it to the AutoCompleteTextView
+        ArrayAdapter<String>(requireActivity(), android.R.layout.simple_list_item_1, countries).also { adapter ->
+            binding.searchEditText.setAdapter(adapter)
+        }
+
+        Timber.d("Back Press tracking | onViewCreated() fun = ${viewModel.backAction.value}")
       with(binding.recyclerView) {
         adapter = WallpapersAdapter{
             findNavController().navigate(HomeDirections.actionHome2ToDetail(it))
@@ -90,29 +87,24 @@ class Home : Fragment() {
 
         //show curated whenever user open app for first time like home screen
         viewModel.wallpapers.observe(viewLifecycleOwner) {
-//            if (viewModel.onStartOfApp.value == true) {
-//                viewModel.fetchFromNetwork(FetchType.Curated)
-//                viewModel.setOnStartOfApp(false)
-//            }
             it?.let {(binding.recyclerView.adapter as WallpapersAdapter).submitList(it) }
 
         }
+
+        // start and end shimmer effect according to fetching and show error message if any
         viewModel.loadingStatus.observe(viewLifecycleOwner){ loadingStatus->
             when (loadingStatus?.status) {
                 Status.LOADING -> {
-//                    binding.loadingStatus.visibility = View.VISIBLE
                     binding.shimmerViewContainer.startShimmerAnimation()
                     binding.shimmerViewContainer.visibility = View.VISIBLE
                     binding.statusError.visibility = View.INVISIBLE
                 }
                 Status.SUCCESS -> {
-//                    binding.loadingStatus.visibility = View.INVISIBLE
                     binding.statusError.visibility = View.INVISIBLE
                     binding.shimmerViewContainer.stopShimmerAnimation()
                     binding.shimmerViewContainer.visibility = View.GONE
                 }
                 Status.ERROR -> {
-//                    binding.loadingStatus.visibility = View.INVISIBLE
                     binding.shimmerViewContainer.stopShimmerAnimation()
                     binding.shimmerViewContainer.visibility = View.GONE
                     showErrorMessage(loadingStatus.errorCode,loadingStatus.message)
@@ -126,6 +118,7 @@ class Home : Fragment() {
             binding.swipeRefresh.isRefreshing = false
         }
 
+        //On refresh show curated wallpapers
         binding.swipeRefresh.setOnRefreshListener {
             viewModel.refreshData()
             binding.searchEditText.setText("")
@@ -155,9 +148,10 @@ class Home : Fragment() {
         try {
             val search = binding.searchEditText.text.trim()
             if(search.isNotEmpty()){
+                //fetch according to user search and set per page to 78
                 viewModel.fetchFromNetwork(FetchType.UserSearch,search.toString(),"78")
                 viewModel.setBackAction(true)
-                Timber.d("Back Press testing | validateInput = ${viewModel.backAction.value}")
+                Timber.d("Back Press tracking | validateInput = ${viewModel.backAction.value}")
             }
         }catch (ex:Exception){
             Timber.e("ValidateInput() Exception is $ex")
@@ -175,11 +169,14 @@ class Home : Fragment() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        binding.shimmerViewContainer.startShimmerAnimation()
+    }
 
-
-//    override fun onDestroyView() {
-//        super.onDestroyView()
-//        viewModel.refreshData()
-//    }
+    override fun onPause() {
+        binding.shimmerViewContainer.stopShimmerAnimation()
+        super.onPause()
+    }
 
 }

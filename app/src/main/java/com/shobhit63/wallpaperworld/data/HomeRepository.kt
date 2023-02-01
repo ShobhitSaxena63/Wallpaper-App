@@ -1,7 +1,6 @@
 package com.shobhit63.wallpaperworld.data
 
 import android.app.Application
-import android.widget.Toast
 import androidx.lifecycle.LiveData
 import com.shobhit63.wallpaperworld.data.network.ErrorCode
 import com.shobhit63.wallpaperworld.data.network.LoadingStatus
@@ -16,13 +15,6 @@ class HomeRepository(context:Application) {
     fun getWallpapers():LiveData<List<Wallpapers>>{
         return homeDao.getWallpapers()
     }
-//    suspend fun fetchFromNetwork(){
-//        val result = pexelsService.getWallpapers()
-//        if(result.isSuccessful){
-//            val wallpapersList = result.body()
-//            wallpapersList?.let { homeDao.insertWallpapers(it.results) }
-//        }
-//    }
     suspend fun fetchFromNetwork(fetchType: FetchType,search:String = "popular",perPage:String = "20") =
         try{
             deleteAllWallpapers()

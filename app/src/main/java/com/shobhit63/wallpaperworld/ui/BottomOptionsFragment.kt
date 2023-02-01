@@ -76,15 +76,12 @@ class BottomOptionsFragment : BottomSheetDialogFragment(),View.OnClickListener,V
         requestPermissionLauncher = registerForActivityResult(ActivityResultContracts.RequestPermission())
         { isGranted: Boolean ->
             if (isGranted) {
-                // Permission is granted. Continue the action or workflow in your
-                // app.
+                // Permission is granted. Continue the action
                 viewModel.wallpapers.observe(viewLifecycleOwner) {
                     it?.let {
                         startDownload(it.src.portrait)
                     }
-
                 }
-//                wallpaper.photographer?.let { startDownload(wallpaper.src.portrait, it) }
             } else {
                 // Explain to the user that the feature is unavailable because the
                 // feature requires a permission that the user has denied. At the
@@ -100,10 +97,14 @@ class BottomOptionsFragment : BottomSheetDialogFragment(),View.OnClickListener,V
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onTouch(v: View, event: MotionEvent): Boolean {
+        //change background of all options when user touches
         when(event.action){
+            //On press
             MotionEvent.ACTION_DOWN -> v.background = ContextCompat.getDrawable(requireActivity(),R.drawable.bottom_dialog_options_background)
+            //on release
             MotionEvent.ACTION_UP -> {
                 v.background = ContextCompat.getDrawable(requireActivity(),R.drawable.bd_not_select_bg)
+              // on release perform action
                 onClick(v)
                             }
         }
@@ -171,7 +172,6 @@ class BottomOptionsFragment : BottomSheetDialogFragment(),View.OnClickListener,V
                         }
 //
                     } catch (e: IOException) {
-                        Toast.makeText(requireActivity(),"not set due to $e", Toast.LENGTH_SHORT).show()
                         e.printStackTrace()
                     }
                 }
@@ -192,7 +192,7 @@ class BottomOptionsFragment : BottomSheetDialogFragment(),View.OnClickListener,V
     }
     private fun requestWritePermission(view: View) {
         if(ActivityCompat.shouldShowRequestPermissionRationale(requireActivity(), Manifest.permission.WRITE_EXTERNAL_STORAGE)){
-            val snack = Snackbar.make(view,"Please accept this to download file",Snackbar.LENGTH_INDEFINITE)
+            val snack = Snackbar.make(view,"Please accept this to download wallpapers",Snackbar.LENGTH_INDEFINITE)
             snack.setAction("OK") {
 //                ActivityCompat.requestPermissions(requireActivity(), arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE),
 //                PERMISSION_REQUEST_WRITE)
