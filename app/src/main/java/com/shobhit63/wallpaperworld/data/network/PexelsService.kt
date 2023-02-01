@@ -2,17 +2,14 @@ package com.shobhit63.wallpaperworld.data.network
 
 
 
-import com.google.gson.Gson
 import com.shobhit63.wallpaperworld.BuildConfig
 import com.google.gson.GsonBuilder
-import com.google.gson.JsonObject
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
-import retrofit2.http.Header
 import retrofit2.http.Headers
 import retrofit2.http.Query
 

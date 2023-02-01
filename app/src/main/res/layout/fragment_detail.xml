@@ -23,28 +23,6 @@
         app:layout_constraintEnd_toEndOf="@id/view"
         app:layout_constraintTop_toBottomOf="@id/photographer_name"/>
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card_view"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_580dp"
-        android:layout_marginTop="@dimen/_16dp"
-        android:layout_marginStart="@dimen/_34dp"
-        android:layout_marginEnd="@dimen/_34dp"
-        app:cardCornerRadius="@dimen/_10dp"
-        app:cardElevation="@dimen/_10dp"
-        android:visibility="gone"
-        app:layout_constraintStart_toStartOf="@id/view"
-        app:layout_constraintEnd_toEndOf="@id/view"
-        app:layout_constraintTop_toBottomOf="@id/photographer_name">
-        <ImageView
-            android:id="@+id/wallpaper_image_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="fitXY"
-            android:contentDescription="@string/wallpapers"
-            tools:srcCompat="@tools:sample/avatars"/>
-    </com.google.android.material.card.MaterialCardView>
-
     <Button
         android:id="@+id/download_btn"
         android:layout_width="@dimen/_60dp"

@@ -3,14 +3,13 @@ package com.shobhit63.wallpaperworld.data
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.google.gson.annotations.SerializedName
 
 enum class FetchType{
     Curated,UserSearch
 }
 
 enum class SetOptions{
-    Nothing,HomeScreen,LockScreen,Both,Save
+    HomeScreen,LockScreen,Both,Save
 }
 
 @Entity(tableName = "wallpapers")
