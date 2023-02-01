@@ -84,7 +84,7 @@ class Home : Fragment() {
         Timber.d("Back Press testing | onViewCreated() fun = ${viewModel.backAction.value}")
       with(binding.recyclerView) {
         adapter = WallpapersAdapter{
-            findNavController().navigate(HomeDirections.actionHome2ToDetail(it,SetOptions.Nothing.name))
+            findNavController().navigate(HomeDirections.actionHome2ToDetail(it))
         }
       }
 

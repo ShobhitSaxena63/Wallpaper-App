@@ -11,6 +11,7 @@
     <dimen name="_28dp">28dp</dimen>
     <dimen name="_32dp">32dp</dimen>
     <dimen name="_34dp">34dp</dimen>
+    <dimen name="_40dp">40dp</dimen>
     <dimen name="_50dp">50dp</dimen>
 <!--    round button in detail fragment -->
     <dimen name="_60dp">60dp</dimen>

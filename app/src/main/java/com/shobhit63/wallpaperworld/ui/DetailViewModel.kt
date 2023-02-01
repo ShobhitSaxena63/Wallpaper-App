@@ -1,12 +1,12 @@
 package com.shobhit63.wallpaperworld.ui
 
 import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.ViewModel
 import com.shobhit63.wallpaperworld.data.DetailRepository
 import com.shobhit63.wallpaperworld.data.Wallpapers
 
-class DetailViewModel(id:Long,application: Application):ViewModel() {
+class DetailViewModel(application: Application): AndroidViewModel(application) {
     private val repo:DetailRepository = DetailRepository(application)
-    val wallpapers:LiveData<Wallpapers> = repo.getWallpaper(id)
+    val allWallpapers:LiveData<List<Wallpapers>> = repo.getAllWallpaper()
 }

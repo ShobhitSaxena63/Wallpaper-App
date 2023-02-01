@@ -18,5 +18,6 @@
     <color name="text_black">#FF000000</color>
 
     <color name="background">#dddddd</color>
+    <color name="linear_layout_bg">#61A19B</color>
 
 </resources>

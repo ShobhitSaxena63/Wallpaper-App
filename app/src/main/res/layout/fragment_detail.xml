@@ -14,6 +14,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_580dp"
+        android:layout_marginTop="@dimen/_16dp"
+        app:layout_constraintStart_toStartOf="@id/view"
+        app:layout_constraintEnd_toEndOf="@id/view"
+        app:layout_constraintTop_toBottomOf="@id/photographer_name"/>
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_view"
@@ -24,6 +32,7 @@
         android:layout_marginEnd="@dimen/_34dp"
         app:cardCornerRadius="@dimen/_10dp"
         app:cardElevation="@dimen/_10dp"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="@id/view"
         app:layout_constraintEnd_toEndOf="@id/view"
         app:layout_constraintTop_toBottomOf="@id/photographer_name">
@@ -47,10 +56,11 @@
         android:background="@drawable/download_btn_background"
         android:contentDescription="@string/app_name"
         app:backgroundTint="@null"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/card_view"
-        app:layout_constraintStart_toStartOf="@+id/card_view"
-        app:layout_constraintTop_toBottomOf="@id/card_view"
+        app:layout_constraintEnd_toEndOf="@+id/view_pager"
+        app:layout_constraintStart_toStartOf="@+id/view_pager"
+        app:layout_constraintTop_toBottomOf="@id/view_pager"
         app:layout_constraintVertical_bias="0.26" />
 
     <TextView

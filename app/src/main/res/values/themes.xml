@@ -29,9 +29,10 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:orientation">horizontal</item>
-        <item name="android:layout_marginTop">@dimen/_16dp</item>
+        <item name="android:background">@drawable/bd_not_select_bg</item>
+        <item name="android:layout_marginTop">@dimen/_8dp</item>
         <item name="android:layout_marginStart">@dimen/_16dp</item>
-        <item name="android:layout_marginEnd">@dimen/_16dp</item>
+        <item name="android:layout_marginEnd">@dimen/_40dp</item>
     </style>
 
 <!--    bottom dialog(bd) linear layout(ll) view for icons-->
