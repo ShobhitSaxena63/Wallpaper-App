@@ -14,4 +14,65 @@
     <string name="set_both">SET BOTH</string>
     <string name="search">Search</string>
     <string name="photographer_name">Photographer: %1$s</string>
+
+    <string-array name="countries_array">
+        <item>Taj Mahal</item>
+        <item>Motivational</item>
+        <item>quotes</item>
+        <item>Inspirational</item>
+        <item>Mountain</item>
+        <item>River</item>
+        <item>Programming</item>
+        <item>Sports</item>
+        <item>Logo</item>
+        <item>Technology</item>
+        <item>Space</item>
+        <item>Saying</item>
+        <item>Patterns</item>
+        <item>News and Politics</item>
+        <item>Music</item>
+        <item>Money</item>
+        <item>Men</item>
+        <item>Cat</item>
+        <item>Home</item>
+        <item>House</item>
+        <item>Dog</item>
+        <item>Bike</item>
+        <item>Ship</item>
+        <item>Boat</item>
+        <item>Abstract</item>
+        <item>Places</item>
+        <item>Beautiful Places</item>
+        <item>Wonders</item>
+        <item>Monkey</item>
+        <item>Mouse</item>
+        <item>Computer</item>
+        <item>Keyboard</item>
+        <item>Nature</item>
+        <item>Superman</item>
+        <item>Batman</item>
+        <item>Car</item>
+        <item>Cricket</item>
+        <item>Movie</item>
+        <item>Hollywood</item>
+        <item>Mango</item>
+        <item>Coins</item>
+        <item>Aeroplane</item>
+        <item>Helicopter</item>
+        <item>Sweets</item>
+        <item>Games</item>
+        <item>Funny</item>
+        <item>Entertainment</item>
+        <item>Designs</item>
+        <item>Drawing</item>
+        <item>Vehicles</item>
+        <item>Anime</item>
+        <item>Trending</item>
+        <item>Market</item>
+        <item>Food</item>
+        <item>Hotel</item>
+        <item>Restaurant</item>
+        <item>Chinese</item>
+        <item>Flag</item>
+    </string-array>
 </resources>

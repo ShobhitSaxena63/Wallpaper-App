@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -67,6 +69,15 @@ class Home : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        // Get a reference to the AutoCompleteTextView in the layout
+//        val textView = findViewById(R.id.autocomplete_country) as AutoCompleteTextView
+// Get the string array
+        val countries: Array<out String> = resources.getStringArray(R.array.countries_array)
+// Create the adapter and set it to the AutoCompleteTextView
+        ArrayAdapter<String>(requireActivity(), android.R.layout.simple_list_item_1, countries).also { adapter ->
+            binding.searchEditText.setAdapter(adapter)
+        }
+
         Timber.d("Back Press tracking | onViewCreated() fun = ${viewModel.backAction.value}")
       with(binding.recyclerView) {
         adapter = WallpapersAdapter{

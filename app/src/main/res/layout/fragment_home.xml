@@ -68,7 +68,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         tools:text="Loading Data" />
 
-    <EditText
+<!--    <EditText-->
+<!--        android:id="@+id/search_edit_text"-->
+<!--        android:layout_width="0dp"-->
+<!--        style="@style/wrap_content_16dp"-->
+<!--        android:ems="3"-->
+<!--        android:background="@drawable/search_edittext_background"-->
+<!--        android:hint="@string/search"-->
+<!--        android:imeOptions="actionSearch"-->
+<!--        android:paddingStart="@dimen/_18dp"-->
+<!--        android:paddingEnd="@dimen/_18dp"-->
+<!--        android:visibility="gone"-->
+<!--        android:maxLength="25"-->
+<!--        android:inputType="text"-->
+<!--        android:minHeight="48dp"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/search_btn"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        />-->
+
+    <AutoCompleteTextView
         android:id="@+id/search_edit_text"
         android:layout_width="0dp"
         style="@style/wrap_content_16dp"
@@ -78,13 +97,13 @@
         android:imeOptions="actionSearch"
         android:paddingStart="@dimen/_18dp"
         android:paddingEnd="@dimen/_18dp"
+        android:visibility="visible"
         android:maxLength="25"
         android:inputType="text"
         android:minHeight="48dp"
         app:layout_constraintEnd_toStartOf="@+id/search_btn"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <Button
         android:id="@+id/search_btn"
