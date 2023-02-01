@@ -6,7 +6,7 @@ import androidx.lifecycle.LiveData
 class DetailRepository(context:Application) {
     private val detailDao:DetailDao = WallpaperDatabase.getDatabase(context).detailDao()
 
-    fun getWallpaper(id:Long):LiveData<Wallpapers>{
-        return detailDao.getWallpapers(id)
+    fun getAllWallpaper():LiveData<List<Wallpapers>>{
+        return detailDao.getAllWallpapers()
     }
 }

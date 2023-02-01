@@ -12,6 +12,7 @@ import com.shobhit63.wallpaperworld.MyTypeConverter
 abstract class WallpaperDatabase:RoomDatabase() {
     abstract fun homeDao():HomeDao
     abstract fun detailDao():DetailDao
+    abstract fun bottomDialogDao():BottomDialogDao
 
     companion object{
         @Volatile

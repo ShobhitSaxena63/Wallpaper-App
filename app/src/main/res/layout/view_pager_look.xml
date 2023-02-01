@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="@dimen/_16dp"
+    android:layout_marginBottom="@dimen/_16dp"
+    android:layout_marginStart="@dimen/_34dp"
+    android:layout_marginEnd="@dimen/_34dp"
+    app:cardCornerRadius="@dimen/_10dp"
+    app:cardElevation="@dimen/_10dp">
+    <ImageView
+        android:id="@+id/wallpaper_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/wallpapers"
+        tools:srcCompat="@tools:sample/avatars"/>
+</com.google.android.material.card.MaterialCardView>

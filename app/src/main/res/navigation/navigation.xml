@@ -19,26 +19,18 @@
         android:name="com.shobhit63.wallpaperworld.ui.Detail"
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail" >
-        <argument
-            android:name="id"
-            app:argType="long" />
         <action
             android:id="@+id/action_detail_to_bottomOptionsFragment"
             app:destination="@id/bottomOptionsFragment" />
         <argument
-            android:name="clickOn"
-            app:argType="string" />
+            android:name="currentItem"
+            app:argType="integer" />
     </fragment>
     <dialog
         android:id="@+id/bottomOptionsFragment"
         android:name="com.shobhit63.wallpaperworld.ui.BottomOptionsFragment"
         android:label="fragment_bottom_options"
         tools:layout="@layout/fragment_bottom_options" >
-        <action
-            android:id="@+id/action_bottomOptionsFragment_to_detail"
-            app:destination="@id/detail"
-            app:popUpTo="@id/detail"
-            app:popUpToInclusive="true" />
         <argument
             android:name="id"
             app:argType="long" />

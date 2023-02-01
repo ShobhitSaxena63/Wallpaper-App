@@ -5,7 +5,7 @@ import androidx.room.Dao
 import androidx.room.Query
 
 @Dao
-interface DetailDao {
-    @Query("SELECT * FROM  wallpapers")
-    fun getAllWallpapers(): LiveData<List<Wallpapers>>
+interface BottomDialogDao {
+    @Query("SELECT * FROM  wallpapers where `id`=:id")
+    fun getWallpapers(id:Long): LiveData<Wallpapers>
 }
