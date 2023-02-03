@@ -10,6 +10,7 @@ Tech Used:
 Kotlin, Refresh layout, Shimmer Effect, View pager 2, Bottom Sheet Dialog Fragment, Retrofit, Glide, Room.
 
 ![shimmer effect](https://user-images.githubusercontent.com/100696254/216515441-f5ecb8a0-f57f-4446-8c38-d953fddc3cf2.jpg)
+<img src="[https://github.com/favicon.ico](https://user-images.githubusercontent.com/100696254/216515441-f5ecb8a0-f57f-4446-8c38-d953fddc3cf2.jpg)" width="48">
 
 ![home 2](https://user-images.githubusercontent.com/100696254/216515374-05976dce-28ea-4eef-9b57-ac507681a40d.jpg)
 
