@@ -20,6 +20,7 @@ Android Studio,Kotlin,XML,Navigation graph, MVVM, Room,LiveData, Refresh layout,
 <br>
 <br>
 ### Screenshots: <br>
+<br>
 <!-- ![shimmer effect](https://user-images.githubusercontent.com/100696254/216515441-f5ecb8a0-f57f-4446-8c38-d953fddc3cf2.jpg) -->
 <p align="center">
   <img src="https://user-images.githubusercontent.com/100696254/216515441-f5ecb8a0-f57f-4446-8c38-d953fddc3cf2.jpg" width="250">
