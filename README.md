@@ -16,7 +16,7 @@ The detail screen is where users can view wallpaper in full-screen mode and inte
 <br>
 
 ### Tech Used: <br>
-Android Studio,Kotlin,XML,Navigation graph, MVVM, Room,LiveData, Refresh layout, Shimmer Effect, Bottom Sheet Dialog Fragment, Retrofit, Glide, Room.
+Android Studio, Kotlin, XML, Navigation graph, MVVM, Room,LiveData, Refresh layout, Shimmer Effect, Bottom Sheet Dialog Fragment, Retrofit, Glide, Room.
 <br>
 <br>
 ### Screenshots: <br>
