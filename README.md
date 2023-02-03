@@ -11,7 +11,6 @@ Kotlin, Refresh layout, Shimmer Effect, View pager 2, Bottom Sheet Dialog Fragme
 
 <!-- ![shimmer effect](https://user-images.githubusercontent.com/100696254/216515441-f5ecb8a0-f57f-4446-8c38-d953fddc3cf2.jpg) -->
 
-<img src="https://user-images.githubusercontent.com/100696254/216515441-f5ecb8a0-f57f-4446-8c38-d953fddc3cf2.jpg" width="48">
 <img src="https://user-images.githubusercontent.com/100696254/216515441-f5ecb8a0-f57f-4446-8c38-d953fddc3cf2.jpg" alt="Loading Screen" width="250"/>
 
 
@@ -22,6 +21,12 @@ Kotlin, Refresh layout, Shimmer Effect, View pager 2, Bottom Sheet Dialog Fragme
 ![bottom dialog](https://user-images.githubusercontent.com/100696254/216515434-9dad6969-40bb-459f-8402-1a2ce64dd66a.jpg)
 
 ![user search 2](https://user-images.githubusercontent.com/100696254/216515469-6b879e1b-4435-40a8-a120-fde0c17ff2f8.jpg)
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/100696254/216515374-05976dce-28ea-4eef-9b57-ac507681a40d.jpg" width="256" height="455">
+  <img src="https://user-images.githubusercontent.com/100696254/216515418-2fc06bb7-c631-45d0-995b-0d3dc69dff0a.jpg" width="256" height="455">
+  <img src="https://user-images.githubusercontent.com/100696254/216515434-9dad6969-40bb-459f-8402-1a2ce64dd66a.jpg" width="256" height="455">
+</p> -->
 
 <!-- Ways to resize screenshots
 1. <img src="https://github.com/your_image.png" alt="Your image title" width="250"/>
