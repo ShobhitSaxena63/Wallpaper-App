@@ -16,9 +16,10 @@ The detail screen is where users can view wallpaper in full-screen mode and inte
 <br>
 
 ### Tech Used: <br>
-Kotlin, Refresh layout, Shimmer Effect, View pager 2, Bottom Sheet Dialog Fragment, Retrofit, Glide, Room.
+Android Studio,Kotlin,XML,Navigation graph, MVVM, Room,LiveData, Refresh layout, Shimmer Effect, Bottom Sheet Dialog Fragment, Retrofit, Glide, Room.
 <br>
 <br>
+### Screenshots: <br>
 <!-- ![shimmer effect](https://user-images.githubusercontent.com/100696254/216515441-f5ecb8a0-f57f-4446-8c38-d953fddc3cf2.jpg) -->
 <p align="center">
   <img src="https://user-images.githubusercontent.com/100696254/216515441-f5ecb8a0-f57f-4446-8c38-d953fddc3cf2.jpg" width="250">
