@@ -14,39 +14,11 @@ Kotlin, Refresh layout, Shimmer Effect, View pager 2, Bottom Sheet Dialog Fragme
   <img src="https://user-images.githubusercontent.com/100696254/216515441-f5ecb8a0-f57f-4446-8c38-d953fddc3cf2.jpg" width="250">
   <img src="https://user-images.githubusercontent.com/100696254/216515374-05976dce-28ea-4eef-9b57-ac507681a40d.jpg" width="250">
   <img src="https://user-images.githubusercontent.com/100696254/216515418-2fc06bb7-c631-45d0-995b-0d3dc69dff0a.jpg" width="250">
-</p> -->
+</p> 
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/100696254/216515434-9dad6969-40bb-459f-8402-1a2ce64dd66a.jpg" width="250">
   <img src="https://user-images.githubusercontent.com/100696254/216517960-df6b2c52-e075-4e84-936d-650d8f368356.jpg" width="250">
   <img src="https://user-images.githubusercontent.com/100696254/216515469-6b879e1b-4435-40a8-a120-fde0c17ff2f8.jpg" width="250">
-</p> -->
+</p> 
 
-<!-- <img src="https://user-images.githubusercontent.com/100696254/216515441-f5ecb8a0-f57f-4446-8c38-d953fddc3cf2.jpg" alt="Loading Screen" width="250"/> -->
-
-
-<!-- ![home 2](https://user-images.githubusercontent.com/100696254/216515374-05976dce-28ea-4eef-9b57-ac507681a40d.jpg) -->
-
-<!-- ![detail 2](https://user-images.githubusercontent.com/100696254/216515418-2fc06bb7-c631-45d0-995b-0d3dc69dff0a.jpg) -->
-
-<!-- ![bottom dialog](https://user-images.githubusercontent.com/100696254/216515434-9dad6969-40bb-459f-8402-1a2ce64dd66a.jpg) -->
-<!-- ![detail 3](https://user-images.githubusercontent.com/100696254/216517960-df6b2c52-e075-4e84-936d-650d8f368356.jpg) -->
-
-<!-- ![user search 2](https://user-images.githubusercontent.com/100696254/216515469-6b879e1b-4435-40a8-a120-fde0c17ff2f8.jpg) -->
-
-<!-- <p align="center">![Uploading detail 3.jpg…]()
-
-  <img src="https://user-images.githubusercontent.com/100696254/216515374-05976dce-28ea-4eef-9b57-ac507681a40d.jpg" width="256" height="455">
-  <img src="https://user-images.githubusercontent.com/100696254/216515418-2fc06bb7-c631-45d0-995b-0d3dc69dff0a.jpg" width="256" height="455">
-  <img src="https://user-images.githubusercontent.com/100696254/216515434-9dad6969-40bb-459f-8402-1a2ce64dd66a.jpg" width="256" height="455">
-</p> --> -->
-
-<!-- Ways to resize screenshots
-1. <img src="https://github.com/your_image.png" alt="Your image title" width="250"/>
-2.<img src="icon.jpg" width="324" height="324">
-
-<p align="center">
-  <img src="screen1.png" width="256" height="455">
-  <img src="screen2.png" width="256" height="455">
-  <img src="screen3.png" width="256" height="455">
-</p> -->
