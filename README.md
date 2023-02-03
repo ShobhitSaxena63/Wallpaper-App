@@ -9,8 +9,11 @@ The detail screen is where users can view wallpaper in full-screen mode and inte
 Tech Used: 
 Kotlin, Refresh layout, Shimmer Effect, View pager 2, Bottom Sheet Dialog Fragment, Retrofit, Glide, Room.
 
-![shimmer effect](https://user-images.githubusercontent.com/100696254/216515441-f5ecb8a0-f57f-4446-8c38-d953fddc3cf2.jpg)
+<!-- ![shimmer effect](https://user-images.githubusercontent.com/100696254/216515441-f5ecb8a0-f57f-4446-8c38-d953fddc3cf2.jpg) -->
+
 <img src="https://user-images.githubusercontent.com/100696254/216515441-f5ecb8a0-f57f-4446-8c38-d953fddc3cf2.jpg" width="48">
+<img src="https://user-images.githubusercontent.com/100696254/216515441-f5ecb8a0-f57f-4446-8c38-d953fddc3cf2.jpg" alt="Loading Screen" width="250"/>
+
 
 ![home 2](https://user-images.githubusercontent.com/100696254/216515374-05976dce-28ea-4eef-9b57-ac507681a40d.jpg)
 
@@ -20,3 +23,12 @@ Kotlin, Refresh layout, Shimmer Effect, View pager 2, Bottom Sheet Dialog Fragme
 
 ![user search 2](https://user-images.githubusercontent.com/100696254/216515469-6b879e1b-4435-40a8-a120-fde0c17ff2f8.jpg)
 
+<!-- Ways to resize screenshots
+1. <img src="https://github.com/your_image.png" alt="Your image title" width="250"/>
+2.<img src="icon.jpg" width="324" height="324">
+
+<p align="center">
+  <img src="screen1.png" width="256" height="455">
+  <img src="screen2.png" width="256" height="455">
+  <img src="screen3.png" width="256" height="455">
+</p> -->
