@@ -33,9 +33,11 @@ Android Studio, Kotlin, XML, Navigation graph, MVVM, Room, Retrofit, LiveData, R
   <img src="https://user-images.githubusercontent.com/100696254/216517960-df6b2c52-e075-4e84-936d-650d8f368356.jpg" width="250">
   <img src="https://user-images.githubusercontent.com/100696254/216515469-6b879e1b-4435-40a8-a120-fde0c17ff2f8.jpg" width="250">
 </p>
-
-
+<br>
+### Video: <br>
+<center>
 <a href="https://youtu.be/q2vPgcyBM1I" target="_blank">
- <img src="https://user-images.githubusercontent.com/100696254/218265426-2a368ecd-92bb-48aa-ad6d-63cd19887286.png" alt="Watch the video" width="240" height="180" border="10" />
+ <img src="https://user-images.githubusercontent.com/100696254/218265426-2a368ecd-92bb-48aa-ad6d-63cd19887286.png" alt="Watch the video" width="300" height="180" border="10" />
 </a>
+</center>
 
