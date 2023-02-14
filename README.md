@@ -35,7 +35,7 @@
 
 <p align="center">
 <a href="https://youtu.be/q2vPgcyBM1I" target="_blank">
- <img src="https://user-images.githubusercontent.com/100696254/218265426-2a368ecd-92bb-48aa-ad6d-63cd19887286.png" alt="Watch the video" width="300" height="180" border="10" />
+ <img src="https://user-images.githubusercontent.com/100696254/218265426-2a368ecd-92bb-48aa-ad6d-63cd19887286.png" alt="Watch the video" width="500"/>
 </a>
 </p>
 
