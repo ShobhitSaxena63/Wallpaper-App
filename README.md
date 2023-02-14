@@ -1,7 +1,7 @@
 # Wallpaper-App
 
 <h3>Description:</h3>
-The app features a vast collection of high-quality wallpapers, ranging from nature landscapes to cityscapes and abstract designs. You can also download your favorite wallpapers to your device and save them for offline use. With its easy-to-use interface, you can quickly change your phone's appearance and personalize it to your taste.
+<p>The app features a vast collection of high-quality wallpapers, ranging from nature landscapes to cityscapes and abstract designs. You can also download your favorite wallpapers to your device and save them for offline use. With its easy-to-use interface, you can quickly change your phone's appearance and personalize it to your taste.</p>
 <br>
 <br>
 
